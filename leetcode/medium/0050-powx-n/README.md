@@ -46,26 +46,35 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1881 ms  
-**Memory:** 44.6 MB  
-**Submitted:** 2026-10-22T12:20:19.299Z  
+**Runtime:** 1 ms (beats 15.00%)  
+**Memory:** 47.8 MB (beats 61.50%)  
+**Submitted:** 2026-10-22T12:25:43.148Z  
 
 ```java
 class Solution {
     public double myPow(double x, int n) {
-        long N = Math.abs((long) n);
+        long power = n;
+
+        if (power < 0) {
+            power = -power;
+        }
 
         double ans = 1.0;
 
-        for (long i = 0; i < N; i++) {
-            ans *= x;
+        while (power > 0) {
+            if (power % 2 == 1) {
+                ans *= x;
+            }
+
+            x *= x;
+            power /= 2;
         }
 
         if (n < 0) {
-            return 1.0 / ans;
-        } else {
-            return ans;
+            ans = 1.0 / ans;
         }
+
+        return ans;
     }
 }
 ```
