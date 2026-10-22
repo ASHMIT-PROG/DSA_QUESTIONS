@@ -1,23 +1,17 @@
 class Solution {
     public double myPow(double x, int n) {
-        long power = n;
+        long N = Math.abs((long) n);
 
-        if (power < 0) {
-            x = 1.0 / x;
-            power = -power;
+        double ans = 1.0;
+
+        for (long i = 0; i < N; i++) {
+            ans *= x;
         }
 
-        double result = 1.0;
-
-        while (power > 0) {
-            if (power % 2 == 1) {
-                result *= x;
-            }
-
-            x *= x;
-            power /= 2;
+        if (n < 0) {
+            return 1.0 / ans;
+        } else {
+            return ans;
         }
-
-        return result;
     }
 }
