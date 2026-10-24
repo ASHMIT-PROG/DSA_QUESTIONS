@@ -34,7 +34,7 @@ The second line contains $n$ space-separated integers representing the array's e
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T18:46:25.957Z  
+**Submitted:** 2026-10-24T18:49:10.623Z  
 
 ```java
 import java.io.*;
