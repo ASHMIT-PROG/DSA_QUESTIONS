@@ -5,18 +5,14 @@ class Solution {
             return 0;
         }
 
-        int i = 0;      // 1st pointer: last unique element ka index
-        int j = 1;      // 2nd pointer: array ko traverse karega
-        int unique = 1; // Pehla element already unique hai
+        int i = 0;
+        int unique = 1;
 
-        while (j < nums.length) {
-            if (nums[j] == nums[i]) {
-                j++;
-            } else {
-                nums[i + 1] = nums[j];
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
                 i++;
+                nums[i] = nums[j];
                 unique++;
-                j++;
             }
         }
 
