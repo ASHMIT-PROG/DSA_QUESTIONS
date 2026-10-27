@@ -62,31 +62,37 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 79.93%)  
-**Memory:** 46 MB (beats 97.25%)  
-**Submitted:** 2026-10-25T17:15:53.510Z  
+**Runtime:** 0 ms  
+**Memory:** 42.2 MB  
+**Submitted:** 2026-10-27T17:13:29.664Z  
 
 ```java
+
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int i =0;// 1st pointer 
-        int j = 1;// 2nd pointer
-        int unique = 1;
+        if (nums.length == 0) {
+            return 0;
+        }
 
-        while(j<nums.length){
-            if(nums[j]==nums[j-1]){// if two numbers are same consiquitevely 
+        int i = 0;      // 1st pointer: last unique element ka index
+        int j = 1;      // 2nd pointer: array ko traverse karega
+        int unique = 1; // Pehla element already unique hai
+
+        while (j < nums.length) {
+            if (nums[j] == nums[i]) {
                 j++;
-            }
-            else if(nums[j]!=nums[j-1]){
-                nums[i+1]=nums[j];
+            } else {
+                nums[i + 1] = nums[j];
                 i++;
                 unique++;
                 j++;
             }
         }
+
         return unique;
     }
 }
+
 ```
 
 ---
