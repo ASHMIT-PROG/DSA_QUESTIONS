@@ -40,17 +40,17 @@ Output: [0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 20.13%)  
-**Memory:** 47.3 MB (beats 93.20%)  
-**Submitted:** 2026-10-26T10:18:36.794Z  
+**Runtime:** 3 ms (beats 21.13%)  
+**Memory:** 47.2 MB (beats 94.87%)  
+**Submitted:** 2026-10-30T14:10:54.496Z  
 
 ```java
 class Solution {
     public void moveZeroes(int[] nums) {
-        int left = 0;
-        int right = 0;
-        while (right < nums.length) {
-            if (nums[right] != 0) {
+        int left = 0;// left pointer 
+        int right = 0;// right pointer
+        while (right < nums.length) {// move the right pointer 
+            if (nums[right] != 0) {// swap the numbers 
                 int temp = nums[left];
                 nums[left] = nums[right];
                 nums[right] = temp;
@@ -61,6 +61,9 @@ class Solution {
         
     }
 }
+
+
+
 ```
 
 ---
