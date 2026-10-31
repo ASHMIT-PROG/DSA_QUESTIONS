@@ -40,29 +40,32 @@ Output: [0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 21.13%)  
-**Memory:** 47.2 MB (beats 94.87%)  
-**Submitted:** 2026-10-30T14:10:54.496Z  
+**Runtime:** 2 ms (beats 92.74%)  
+**Memory:** 47.5 MB (beats 79.80%)  
+**Submitted:** 2026-10-31T14:40:13.562Z  
 
 ```java
+
 class Solution {
     public void moveZeroes(int[] nums) {
-        int left = 0;// left pointer 
-        int right = 0;// right pointer
-        while (right < nums.length) {// move the right pointer 
-            if (nums[right] != 0) {// swap the numbers 
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
-                left++;
+
+        int index = 0;
+
+        // Step 1: Place all non-zero elements first
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
             }
-            right++;
         }
-        
+
+        // Step 2: Fill remaining positions with zeroes
+        while (index < nums.length) {
+            nums[index] = 0;
+            index++;
+        }
     }
 }
-
-
 
 ```
 
