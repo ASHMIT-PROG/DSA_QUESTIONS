@@ -1,18 +1,21 @@
+
 class Solution {
     public void moveZeroes(int[] nums) {
-        int left = 0;// left pointer 
-        int right = 0;// right pointer
-        while (right < nums.length) {// move the right pointer 
-            if (nums[right] != 0) {// swap the numbers 
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
-                left++;
+
+        int index = 0;
+
+        // Step 1: Place all non-zero elements first
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
             }
-            right++;
         }
-        
+
+        // Step 2: Fill remaining positions with zeroes
+        while (index < nums.length) {
+            nums[index] = 0;
+            index++;
+        }
     }
 }
-
-
