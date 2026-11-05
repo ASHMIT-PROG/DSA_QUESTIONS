@@ -48,9 +48,9 @@ Return the  **minimum**  number of operations needed to have  **at least**  `k` 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 341 ms (beats 89.19%)  
-**Memory:** 161.9 MB (beats 64.86%)  
-**Submitted:** 2026-11-05T15:13:48.447Z  
+**Runtime:** 343 ms (beats 89.19%)  
+**Memory:** 162.2 MB (beats 64.86%)  
+**Submitted:** 2026-11-05T15:15:55.437Z  
 
 ```java
 import java.util.Arrays;
