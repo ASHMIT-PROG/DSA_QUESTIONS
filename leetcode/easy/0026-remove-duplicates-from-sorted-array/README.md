@@ -62,9 +62,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 82.93%)  
-**Memory:** 46.6 MB (beats 48.98%)  
-**Submitted:** 2026-11-04T17:54:57.207Z  
+**Runtime:** 1 ms (beats 84.01%)  
+**Memory:** 46.2 MB (beats 82.75%)  
+**Submitted:** 2026-11-07T17:47:03.764Z  
 
 ```java
 class Solution {
@@ -79,7 +79,6 @@ class Solution {
         int i = 0;
 
         // Initially, the first element is always unique.
-        int unique = 1;
 
         // j starts from index 1 to check the remaining elements.
         for (int j = 1; j < nums.length; j++) {
@@ -95,12 +94,12 @@ class Solution {
                 nums[i] = nums[j];
 
                 // Increase the count of unique elements.
-                unique++;
+                
             }
         }
 
         // Return the total number of unique elements.
-        return unique;
+        return i+1;
     }
 }
 ```
