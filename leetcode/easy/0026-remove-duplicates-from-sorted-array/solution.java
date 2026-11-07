@@ -10,7 +10,6 @@ class Solution {
         int i = 0;
 
         // Initially, the first element is always unique.
-        int unique = 1;
 
         // j starts from index 1 to check the remaining elements.
         for (int j = 1; j < nums.length; j++) {
@@ -26,11 +25,11 @@ class Solution {
                 nums[i] = nums[j];
 
                 // Increase the count of unique elements.
-                unique++;
+                
             }
         }
 
         // Return the total number of unique elements.
-        return unique;
+        return i+1;
     }
 }
