@@ -50,8 +50,8 @@ Explanation: The two servers in the first row can communicate with each other. 
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 55.11%)  
-**Memory:** 54.8 MB (beats 64.71%)  
-**Submitted:** 2026-11-09T18:06:34.567Z  
+**Memory:** 55 MB (beats 58.20%)  
+**Submitted:** 2026-11-09T18:07:07.799Z  
 
 ```java
 class Solution {
