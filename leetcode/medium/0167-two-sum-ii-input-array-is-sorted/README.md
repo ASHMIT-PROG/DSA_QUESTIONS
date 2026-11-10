@@ -56,15 +56,15 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 97.12%)  
-**Memory:** 48.1 MB (beats 82.35%)  
-**Submitted:** 2026-10-26T09:45:29.381Z  
+**Runtime:** 2 ms (beats 97.77%)  
+**Memory:** 48 MB (beats 74.11%)  
+**Submitted:** 2026-11-10T15:36:39.519Z  
 
 ```java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int i = 0;
-        int j = numbers.length-1;
+        int j = numbers.length-1; // last element
         while(i<j){
             int sum = numbers[i]+numbers[j];
             if(sum==target){
