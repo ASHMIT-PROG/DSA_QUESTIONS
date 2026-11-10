@@ -1,7 +1,7 @@
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int i = 0;
-        int j = numbers.length-1;
+        int j = numbers.length-1; // last element
         while(i<j){
             int sum = numbers[i]+numbers[j];
             if(sum==target){
