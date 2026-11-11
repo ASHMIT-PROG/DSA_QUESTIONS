@@ -12,6 +12,8 @@ You can return the answer in any order.
 
  
 
+Original
+Java
  **Example 1:** 
 
  **Input:**  `nums = [2,7,11,15], target = 9`
@@ -58,14 +60,14 @@ The sum of `nums[0]` and `nums[1]` is `3 + 3 = 6`, which equals the target. Ther
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 58.49%)  
-**Memory:** 46.7 MB (beats 85.67%)  
-**Submitted:** 2026-10-28T18:08:50.365Z  
+**Runtime:** 2 ms (beats 99.40%)  
+**Memory:** 46.7 MB (beats 75.89%)  
+**Submitted:** 2026-11-11T16:29:59.902Z  
 
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> pairIdx = new HashMap<>();
+        Map<Integer, Integer> pairIdx = new HashMap<>();// here we will use hashmap
 
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
