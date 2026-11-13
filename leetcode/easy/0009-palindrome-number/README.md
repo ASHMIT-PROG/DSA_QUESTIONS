@@ -8,6 +8,8 @@ Given an integer `x`, return `true` if `x` is a  **palindrome**, and `false` oth
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -48,14 +50,14 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 9.70%)  
-**Memory:** 45.6 MB (beats 92.06%)  
-**Submitted:** 2026-10-22T14:11:31.883Z  
+**Runtime:** 14 ms (beats 34.36%)  
+**Memory:** 45.4 MB (beats 80.96%)  
+**Submitted:** 2026-11-13T16:25:15.088Z  
 
 ```java
 class Solution {
     public boolean isPalindrome(int x) {
-        if (x < 0) {
+        if (x < 0) { // edge case
             return false;
         }
 
