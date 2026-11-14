@@ -8,7 +8,7 @@ class Solution {
                 return new int[] {i+1,j+1};// 1 based indexing
             }
             else if(sum>target){
-                j--;
+                j--; // if sum is greater than target go back
             }
             else{
                 i++;
