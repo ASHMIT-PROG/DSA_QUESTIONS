@@ -56,9 +56,9 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 97.77%)  
-**Memory:** 48 MB (beats 74.11%)  
-**Submitted:** 2026-11-10T15:36:39.519Z  
+**Runtime:** 2 ms (beats 97.85%)  
+**Memory:** 47.9 MB (beats 85.58%)  
+**Submitted:** 2026-11-14T16:27:17.901Z  
 
 ```java
 class Solution {
@@ -71,7 +71,7 @@ class Solution {
                 return new int[] {i+1,j+1};// 1 based indexing
             }
             else if(sum>target){
-                j--;
+                j--; // if sum is greater than target go back
             }
             else{
                 i++;
