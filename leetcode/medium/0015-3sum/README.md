@@ -10,6 +10,8 @@ Notice that the solution set must not contain duplicate triplets.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -52,9 +54,9 @@ Explanation: The only possible triplet sums up to 0.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 30 ms (beats 88.16%)  
-**Memory:** 58.8 MB (beats 77.69%)  
-**Submitted:** 2026-11-03T17:36:43.316Z  
+**Runtime:** 29 ms (beats 94.21%)  
+**Memory:** 58.5 MB (beats 89.99%)  
+**Submitted:** 2026-11-15T18:16:55.461Z  
 
 ```java
 class Solution {
@@ -77,7 +79,8 @@ class Solution {
                     k--;
                 } else if (total < 0) {
                     j++;
-                } else {
+                } else 
+                {
                     res.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
 
