@@ -18,7 +18,8 @@ class Solution {
                     k--;
                 } else if (total < 0) {
                     j++;
-                } else {
+                } else 
+                {
                     res.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
 
